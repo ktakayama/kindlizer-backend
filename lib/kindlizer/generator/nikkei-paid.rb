@@ -89,7 +89,7 @@ module Kindlizer
 
 				begin
 					generate_contents( toc, agent )
-					yield "#{@dst_dir}/nikkei-free.opf"
+					yield "#{@dst_dir}/nikkei-paid.opf"
 				end
 			end
 
@@ -289,7 +289,7 @@ module Kindlizer
 			def generate_contents( toc, agent )
 				open( "#{@dst_dir}/toc.html", 'w:utf-8' ) do |html|
 				open( "#{@dst_dir}/toc.ncx", 'w:utf-8' ) do |ncx|
-				open( "#{@dst_dir}/nikkei-free.opf", 'w:utf-8' ) do |opf|
+				open( "#{@dst_dir}/nikkei-paid.opf", 'w:utf-8' ) do |opf|
 					first = true
 					toc_index = 0
 					aids = []
